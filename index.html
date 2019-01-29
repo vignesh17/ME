@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Viki</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
+    <link rel="stylesheet" href="css/libs/animate.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+   <!--  <script type="text/javascript" src="js/init.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      #progressBar {
+          width: 312px;
+          height: 22px;
+          border: 1px solid #111;
+          background-color: #292929;
+      }
+      #progressBar div {
+          height: 100%;
+          color: #fff;
+          text-align: right;
+          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+          width: 0;
+          background-color: #0099ff;
+      }
+
+      #progressBar2 {
+          width: 312px;
+          height: 22px;
+          border: 1px solid #111;
+          background-color: #292929;
+      }
+      #progressBar2 div {
+          height: 100%;
+          color: #fff;
+          text-align: right;
+          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+          width: 0;
+          background-color: #0099ff;
+      }
+
+      #progressBar3 {
+          width: 312px;
+          height: 22px;
+          border: 1px solid #111;
+          background-color: #292929;
+      }
+      #progressBar3 div {
+          height: 100%;
+          color: #fff;
+          text-align: right;
+          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+          width: 0;
+          background-color: #0099ff;
+      }
+
+      #progressBar4 {
+          width: 312px;
+          height: 22px;
+          border: 1px solid #111;
+          background-color: #292929;
+      }
+      #progressBar4 div {
+          height: 100%;
+          color: #fff;
+          text-align: right;
+          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+          width: 0;
+          background-color: #0099ff;
+      }
+
+      #progressBar5 {
+          width: 312px;
+          height: 22px;
+          border: 1px solid #111;
+          background-color: #292929;
+      }
+      #progressBar5 div {
+          height: 100%;
+          color: #fff;
+          text-align: right;
+          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+          width: 0;
+          background-color: #0099ff;
+      }
+
+      #progressBar6 {
+          width: 312px;
+          height: 22px;
+          border: 1px solid #111;
+          background-color: #292929;
+      }
+      #progressBar6 div {
+          height: 100%;
+          color: #fff;
+          text-align: right;
+          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+          width: 0;
+          background-color: #0099ff;
+      }
+
+      .tiny-green {
+          position: relative;
+          padding: 3px;
+
+        background-image:-moz-linear-gradient(53% 13% -90deg,rgb(58,64,80) 0%,rgb(58,64,80) 47%,rgb(46,50,62) 48%,rgb(46,50,62) 100%);
+        background-image:-webkit-gradient(linear,53% 13%,53% 79%,color-stop(0, rgb(58,64,80)),color-stop(0.47, rgb(58,64,80)),color-stop(0.48, rgb(46,50,62)),color-stop(1, rgb(46,50,62)));
+        background-image:-webkit-linear-gradient(-90deg,rgb(58,64,80) 0%,rgb(58,64,80) 47%,rgb(46,50,62) 48%,rgb(46,50,62) 100%);
+        background-image:linear-gradient(-180deg,rgb(58,64,80) 0%,rgb(58,64,80) 47%,rgb(46,50,62) 48%,rgb(46,50,62) 100%);
+
+        -moz-border-radius: 10px; /* Firefox */
+        -webkit-border-radius: 10px; /* Webkit */
+        border-radius: 10px;
+      }
+
+      .tiny-green div {
+        font-family: arial;
+        font-size: 3px;
+        color: white;
+        text-align: right;
+        text-shadow: 0px 0px 2px #000;
+        text-indent: 9999px;
+        overflow: hidden;
+
+        background-image:-webkit-gradient(linear,71% 25%,71% 69%,color-stop(0, rgb(118,177,1)),color-stop(0.47, rgb(118,177,1)),color-stop(0.48, rgb(102,153,0)),color-stop(1, rgb(102,153,0)));
+        background-image:-webkit-linear-gradient(-90deg,rgb(118,177,1) 0%,rgb(118,177,1) 47%,rgb(102,153,0) 48%,rgb(102,153,0) 100%);
+        background-image:-moz-linear-gradient(71% 25% -180deg,rgb(118,177,1) 0%,rgb(118,177,1) 47%,rgb(102,153,0) 48%,rgb(102,153,0) 100%);
+        background-image:linear-gradient(-180deg,rgb(118,177,1) 0%,rgb(118,177,1) 47%,rgb(102,153,0) 48%,rgb(102,153,0) 100%);
+
+        -moz-border-radius: 10px; /* Firefox */
+        -webkit-border-radius: 10px; /* Webkit */
+        border-radius: 10px;
+      }
+      a{
+        color: #0366d6;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .eighteen p {
+          font-size: 18px;
+      }
+      .seventeen p {
+          font-size: 17px;
+      }
+    </style>
+    <script>
+      function progress(percent, $element) {
+          var progressBarWidth = percent * $element.width() / 100;
+          $element.find('div').animate({ width: progressBarWidth }, 500).html(percent + "% ");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/parallax_slider.jpeg" style="height: 600px"></div>
+    <section>
+      <div class="container" align="center">
+        <br>
+        <br>
+        <h2 class="wow bounceInLeft">Hello World!</h2>      
+        <h1 class="wow slideInLeft">I am Vignesh Manishankar.</h1>      
+        <h3 class="wow slideInLeft">A passionate software engineer by day.</h3>
+        <br>
+        <br>
+      </div>
+    </section>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/parallax_slider2.jpg" style="height: 600px"></div>
+    <section> 
+      <div class="container row">
+        <br>
+        <br>
+        <h3 class="wow bounceInLeft">&nbsp;&nbsp;&nbsp;And a coder at night...</h3> 
+        <br>
+        <div class="col-md-6">    
+        <p class="wow bounceInLeft">Python</p>   
+        <div id="progressBar" class="wow slideInLeft tiny-green"><div></div></div>   
+        <br>
+        <p class="wow bounceInLeft">C++</p>    
+        <div id="progressBar2" class="wow slideInLeft tiny-green"><div></div></div>  
+        <br>
+        <p class="wow bounceInLeft">Java</p>    
+        <div id="progressBar3" class="wow slideInLeft tiny-green"><div></div></div>  
+        <br>
+        </div>
+        <div class="col-md-6"> 
+        <p class="wow bounceInLeft">SQL</p>    
+        <div id="progressBar4" class="wow slideInLeft tiny-green"><div></div></div>  
+        <br>
+        <p class="wow bounceInLeft">iOS</p>    
+        <div id="progressBar5" class="wow slideInLeft tiny-green"><div></div></div>  
+        <br>
+        <p class="wow bounceInLeft">MongoDB</p>    
+        <div id="progressBar6" class="wow slideInLeft tiny-green"><div></div></div>  
+        <br>
+        </div>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/parallax_slider3.jpg" style="height: 600px"></div>
+    <section>
+      <div class="container" align="left">
+        <br>
+        <br>    
+        <h3 class="wow slideInLeft">My work!</h3>
+        <hr>
+        <br>
+        <a href="https://github.com/vignesh17/Shamir-s-Secret-Sharing-and-Rotation">Image Encryption and Rotation</a>
+        <br>
+        <br>
+        <p class="eighteen"> A Smart Image encryption and rotation algorithm. </p>
+        <p class="seventeen" style="color:#e00"> Java </p>
+        <br>
+        <hr>
+        <br>
+        <a href="https://github.com/vignesh17/Stock-Market">Stock Exchange</a>
+        <br>
+        <br>
+        <p class="eighteen"> A portfolio for purchased stocks. </p>
+        <p class="seventeen" style="color:#e00"> Java </p>
+        <br>
+        <hr>
+        <br>
+        <a href="https://github.com/vignesh17/H2P-Hire-Human-Power">Human Resource Management</a>
+        <br>
+        <br>
+        <p class="eighteen"> A single portal for job application and review.</p>
+        <p class="seventeen" style="color:#e00"> CSS </p>
+        <br>
+        <hr>
+        <br>
+        <a href="https://github.com/vignesh17/Kalvettu_Web">Transliteration of Ancient Stone Inscriptions</a>
+        <br>
+        <br>
+        <p class="eighteen"> A translator for ancient tamil scripts!</p>
+        <p class="seventeen" style="color:#e00"> JavaScript </p>
+        <br>
+        <hr>
+        <br>
+        <a href="https://github.com/vignesh17/Map-My-Problems">Map My Problems</a>
+        <br>
+        <br>
+        <p class="eighteen"> A portal to file and preview complaints for lack/improper amenities.</p>
+        <p class="seventeen" style="color:#e00"> PHP </p>
+        <br>
+        <hr>
+        <br>
+        <br>
+      </div>
+    </section>
+     <div class="parallax-window" data-parallax="scroll" data-image-src="assets/contact_slider.jpeg" style="height: 600px"></div>
+    <section>
+      <div class="container" align="right">
+        <br>
+        <br>
+        <div class="copyright" style="font-size:22px">2019 © Vignesh M&nbsp;&nbsp;<a href="https://www.linkedin.com/in/vignesh-manishankar/"><i class="fab fa-linkedin"></i></a>&nbsp;/&nbsp;<a href="https://github.com/vignesh17"><i class="fab fa-github"></i></a></div>
+        <br>
+        <br>
+      </div>
+    </section>
+
+     <script src="js/wow.js"></script>
+      <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100,
+            callback:     function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        progress(80, $('#progressBar'));
+        progress(70, $('#progressBar2'));
+        progress(75, $('#progressBar3'));
+        progress(80, $('#progressBar4'));
+        progress(50, $('#progressBar5'));
+        progress(55, $('#progressBar6'));
+      </script>
+  </body>
+</html>
