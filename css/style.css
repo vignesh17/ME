@@ -1,0 +1,720 @@
+:root {
+    /* Dark mode colors (default) */
+    --bg-color: #011627;
+    --text-color: #E5E9F0;
+    --accent-color: #4D5BCE;
+    --secondary-color: #607B96;
+    --hover-color: #1E2D3D;
+    --success-green: #43D9AD;
+    --string-pink: #E99287;
+    --accent-hover-bg: rgba(77, 91, 206, 0.1);
+    --accent-active-bg: rgba(77, 91, 206, 0.2);
+    --project-tech-bg: rgba(233, 146, 135, 0.1);
+
+    /* Light mode colors */
+    --light-bg-color: #F2F5F9;
+    --light-text-color: #1E2D3D;
+    --light-accent-color: #4D5BCE;
+    --light-secondary-color: #607B96;
+    --light-hover-color: #E5E9F0;
+    --light-tab-bg: #FFFFFF;
+    --light-success-green: #3CA892;
+    --light-string-pink: #C64F45;
+    --light-accent-hover-bg: rgba(77, 91, 206, 0.1);
+    --light-accent-active-bg: rgba(77, 91, 206, 0.15);
+    --light-project-tech-bg: rgba(198, 79, 69, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: var(--hover-color);
+    padding: 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 0;
+    padding: 1rem;
+    display: inline-block;
+    border-right: 1px solid var(--secondary-color);
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+main {
+    flex: 1;
+    padding: 0;
+}
+
+.content {
+    max-width: none;
+    margin: 0;
+    display: flex;
+}
+
+#hello {
+    max-width: none;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#about-me {
+    display: flex;
+    height: calc(100vh - 89px);
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--bg-color);
+    padding: 0;
+    flex-shrink: 0;
+    margin-top: 55px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 300px);
+}
+
+.code-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+}
+
+.editor-content {
+    display: flex;
+    overflow: auto;
+}
+
+.code-content {
+    flex: 1;
+    padding: 1rem;
+    background: var(--bg-color);
+    overflow: auto;
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.role {
+    color: var(--success-green);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.code-block {
+    background-color: var(--hover-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.comment {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.const {
+    color: var(--accent-color);
+}
+
+.variable {
+    color: var(--success-green);
+}
+
+.string {
+    color: var(--string-pink);
+}
+
+.folder-group {
+    margin-bottom: 0.5rem;
+}
+
+.folder-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.folder-header:hover {
+    background-color: var(--accent-hover-bg);
+}
+
+.folder-content {
+    display: none;
+    padding-left: 2.5rem;
+}
+
+.folder-content.open {
+    display: block;
+}
+
+.arrow {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.folder-icon, .file-icon {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.file {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.25rem 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.file:hover {
+    background-color: var(--accent-hover-bg);
+}
+
+.file.active {
+    background-color: var(--accent-active-bg);
+}
+
+.file a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.editor-header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0;
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--hover-color);
+    border-right: 1px solid var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.tab-content {
+    color: var(--text-color);
+}
+
+.close {
+    margin-left: 1rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.line-numbers {
+    padding: 1rem;
+    color: var(--secondary-color);
+    background-color: var(--bg-color);
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
+    user-select: none;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.vertical-rule {
+    display: none;
+}
+
+.numbers {
+    line-height: 1.4;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+/* Skills section styles */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-item input[type="checkbox"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+    position: relative;
+    margin: 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.skill-item input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.skill-item input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 0.75rem;
+    left: 1px;
+    top: -1px;
+}
+
+.skill-item label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+/* Projects page styles */
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
+}
+
+.project-card {
+    background-color: var(--hover-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--secondary-color);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    fill: var(--accent-color);
+}
+
+.icon text {
+    fill: var(--text-color);
+    font-family: 'Fira Code', monospace;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.project-tech {
+    color: var(--string-pink);
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--project-tech-bg);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.project-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--hover-color);
+    padding: 1rem;
+    border-top: 1px solid var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.theme-switch {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.theme-switch i {
+    font-size: 1.2rem;
+}
+
+.copyright {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.social-links {
+    justify-self: end;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Theme switch styles */
+.theme-switch input {
+    display: none;
+}
+
+.theme-switch label {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-switch label:hover {
+    background-color: var(--accent-hover-bg);
+}
+
+.file-content {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.5;
+}
+
+.file-content p {
+    margin-bottom: 0.4rem;
+}
+
+.file.active {
+    background-color: rgba(77, 91, 206, 0.1);
+    border-radius: 4px;
+}
+
+.file.active span {
+    color: var(--accent-color);
+}
+
+.indent {
+    margin-left: 2rem;
+}
+
+.indent-2 {
+    margin-left: 4rem;
+}
+
+/* Update existing styles */
+.editor-header {
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px 4px 0 0;
+    background-color: var(--hover-color);
+    font-size: 0.9rem;
+}
+
+.tab i {
+    color: var(--secondary-color);
+}
+
+/* LinkedIn widget styles */
+.recommendations-wrapper {
+    padding: 1rem;
+    background-color: var(--bg-color);
+}
+
+.LI-profile-badge {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.LI-profile-badge .LI-badge-container {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--secondary-color) !important;
+    border-radius: 4px;
+}
+
+.LI-profile-badge .LI-name {
+    color: var(--text-color) !important;
+}
+
+.LI-profile-badge .LI-field {
+    color: var(--secondary-color) !important;
+}
+
+@media screen and (max-height: 800px) {
+    .file-content {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+/* Mobile menu button - hidden by default */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    #about-me {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: calc(100% - 10px);
+        margin-top: 10px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .main-content.hide {
+        transform: translateX(100%);
+    }
+
+    /* Adjust padding for mobile */
+    .code-content {
+        padding: 0.5rem;
+    }
+}
+
+/* Light theme styles */
+body.light-theme {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
+}
+
+body.light-theme nav,
+body.light-theme .editor-header,
+body.light-theme footer {
+    background-color: var(--light-hover-color);
+}
+
+body.light-theme .code-block,
+body.light-theme .project-card {
+    background-color: var(--light-hover-color);
+}
+
+/* Menu and folder text colors */
+body.light-theme .folder-header,
+body.light-theme .folder-header span,
+body.light-theme .file,
+body.light-theme .file span,
+body.light-theme .arrow {
+    color: var(--light-text-color);
+}
+
+body.light-theme .comment {
+    color: var(--light-secondary-color);
+}
+
+body.light-theme .role {
+    color: var(--light-success-green);
+}
+
+body.light-theme .const {
+    color: var(--light-accent-color);
+}
+
+body.light-theme .variable {
+    color: var(--light-success-green);
+}
+
+body.light-theme .string {
+    color: var(--light-string-pink);
+}
+
+body.light-theme .folder-header:hover,
+body.light-theme .file:hover {
+    background-color: var(--light-accent-hover-bg);
+}
+
+body.light-theme .file.active {
+    background-color: var(--light-accent-active-bg);
+}
+
+body.light-theme .file.active span {
+    color: var(--light-accent-color);
+}
+
+body.light-theme .project-tech {
+    color: var(--light-string-pink);
+    background-color: var(--light-project-tech-bg);
+}
+
+body.light-theme .code-editor,
+body.light-theme .code-content,
+body.light-theme .line-numbers,
+body.light-theme .sidebar {
+    background-color: var(--light-bg-color);
+}
+
+body.light-theme .tab {
+    background-color: var(--light-tab-bg);
+    border: 1px solid var(--light-secondary-color);
+    border-bottom: none;
+}
+
+/* Update link colors for light theme */
+body.light-theme a,
+body.light-theme .file a {
+    color: var(--light-text-color);
+}
+
+body.light-theme a:hover,
+body.light-theme .file a:hover {
+    color: var(--light-accent-color);
+}
+
+/* Tab and editor styles */
+body.light-theme .tab-content {
+    color: var(--light-text-color);
+}
+
+body.light-theme .close {
+    color: var(--light-secondary-color);
+}
+
+/* Project icon styles */
+body.light-theme .icon {
+    fill: var(--light-accent-color);
+}
+
+body.light-theme .icon text {
+    fill: var(--light-text-color);
+}
+
+body.light-theme .project-card h3 {
+    color: var(--light-accent-color);
+}
+
+body.light-theme .project-card p {
+    color: var(--light-secondary-color);
+}
+
+.copyright a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    opacity: 0.8;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Light theme overrides */
+body.light-theme .copyright a {
+    color: var(--light-text-color);
+}
+
+body.light-theme .social-links a {
+    color: var(--light-text-color);
+} 
