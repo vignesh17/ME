@@ -221,6 +221,7 @@ h2 {
 #about-me .file a {
     color: var(--text-color);
     text-decoration: none;
+    width: 100%;
 }
 
 #about-me .file:hover a {
