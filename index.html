@@ -1,289 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Vignesh Manishankar</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
-    <link rel="stylesheet" href="css/libs/animate.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/parallax.js"></script>
-   <!--  <script type="text/javascript" src="js/init.js"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-      #progressBar {
-          width: 312px;
-          height: 22px;
-          border: 1px solid #111;
-          background-color: #292929;
-      }
-      #progressBar div {
-          height: 100%;
-          color: #fff;
-          text-align: right;
-          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-          width: 0;
-          background-color: #0099ff;
-      }
 
-      #progressBar2 {
-          width: 312px;
-          height: 22px;
-          border: 1px solid #111;
-          background-color: #292929;
-      }
-      #progressBar2 div {
-          height: 100%;
-          color: #fff;
-          text-align: right;
-          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-          width: 0;
-          background-color: #0099ff;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vignesh Manishankar</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+</head>
 
-      #progressBar3 {
-          width: 312px;
-          height: 22px;
-          border: 1px solid #111;
-          background-color: #292929;
-      }
-      #progressBar3 div {
-          height: 100%;
-          color: #fff;
-          text-align: right;
-          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-          width: 0;
-          background-color: #0099ff;
-      }
+<body>
+  <nav>
+    <a href="#" class="active">_hello</a>
+    <a href="#">_about-me</a>
+    <a href="#">_projects</a>
+  </nav>
 
-      #progressBar4 {
-          width: 312px;
-          height: 22px;
-          border: 1px solid #111;
-          background-color: #292929;
-      }
-      #progressBar4 div {
-          height: 100%;
-          color: #fff;
-          text-align: right;
-          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-          width: 0;
-          background-color: #0099ff;
-      }
+  <main>
+    <div class="content" id="hello">
+      <h1>Hi all, I am</h1>
+      <h2>Vignesh Manishankar</h2>
+      <img src="assets/dp.png" alt="Vignesh Manishankar" class="profile-pic">
+      <p class="role">> Backend Software Engineer</p>
 
-      #progressBar5 {
-          width: 312px;
-          height: 22px;
-          border: 1px solid #111;
-          background-color: #292929;
-      }
-      #progressBar5 div {
-          height: 100%;
-          color: #fff;
-          text-align: right;
-          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-          width: 0;
-          background-color: #0099ff;
-      }
-
-      #progressBar6 {
-          width: 312px;
-          height: 22px;
-          border: 1px solid #111;
-          background-color: #292929;
-      }
-      #progressBar6 div {
-          height: 100%;
-          color: #fff;
-          text-align: right;
-          line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-          width: 0;
-          background-color: #0099ff;
-      }
-
-      .tiny-green {
-          position: relative;
-          padding: 3px;
-
-        background-image:-moz-linear-gradient(53% 13% -90deg,rgb(58,64,80) 0%,rgb(58,64,80) 47%,rgb(46,50,62) 48%,rgb(46,50,62) 100%);
-        background-image:-webkit-gradient(linear,53% 13%,53% 79%,color-stop(0, rgb(58,64,80)),color-stop(0.47, rgb(58,64,80)),color-stop(0.48, rgb(46,50,62)),color-stop(1, rgb(46,50,62)));
-        background-image:-webkit-linear-gradient(-90deg,rgb(58,64,80) 0%,rgb(58,64,80) 47%,rgb(46,50,62) 48%,rgb(46,50,62) 100%);
-        background-image:linear-gradient(-180deg,rgb(58,64,80) 0%,rgb(58,64,80) 47%,rgb(46,50,62) 48%,rgb(46,50,62) 100%);
-
-        -moz-border-radius: 10px; /* Firefox */
-        -webkit-border-radius: 10px; /* Webkit */
-        border-radius: 10px;
-      }
-
-      .tiny-green div {
-        font-family: arial;
-        font-size: 3px;
-        color: white;
-        text-align: right;
-        text-shadow: 0px 0px 2px #000;
-        text-indent: 9999px;
-        overflow: hidden;
-
-        background-image:-webkit-gradient(linear,71% 25%,71% 69%,color-stop(0, rgb(118,177,1)),color-stop(0.47, rgb(118,177,1)),color-stop(0.48, rgb(102,153,0)),color-stop(1, rgb(102,153,0)));
-        background-image:-webkit-linear-gradient(-90deg,rgb(118,177,1) 0%,rgb(118,177,1) 47%,rgb(102,153,0) 48%,rgb(102,153,0) 100%);
-        background-image:-moz-linear-gradient(71% 25% -180deg,rgb(118,177,1) 0%,rgb(118,177,1) 47%,rgb(102,153,0) 48%,rgb(102,153,0) 100%);
-        background-image:linear-gradient(-180deg,rgb(118,177,1) 0%,rgb(118,177,1) 47%,rgb(102,153,0) 48%,rgb(102,153,0) 100%);
-
-        -moz-border-radius: 10px; /* Firefox */
-        -webkit-border-radius: 10px; /* Webkit */
-        border-radius: 10px;
-      }
-      a{
-        color: #0366d6;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 20px;
-      }
-      .eighteen p {
-          font-size: 18px;
-      }
-      .seventeen p {
-          font-size: 17px;
-      }
-    </style>
-    <script>
-      function progress(percent, $element) {
-          var progressBarWidth = percent * $element.width() / 100;
-          $element.find('div').animate({ width: progressBarWidth }, 500).html(percent + "% ");
-      }
-    </script>
-  </head>
-  <body>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/parallax_slider.jpeg" style="height: 600px"></div>
-    <section>
-      <div class="container" align="center">
-        <br>
-        <br>
-        <h2 class="wow bounceInLeft">Hello World!</h2>      
-        <h1 class="wow slideInLeft">I am Vignesh Manishankar.</h1>      
-        <h3 class="wow slideInLeft">A passionate software engineer by day.</h3>
-        <br>
-        <br>
+      <div class="code-block">
+        <p class="comment">// my profile</p>
+        <p><span class="const">const</span> <span class="variable">githubLink</span> = <span
+            class="string">"https://github.com/vignesh17"</span>;</p>
+        <p><span class="const">const</span> <span class="variable">linkedinLink</span> = <span
+            class="string">"https://www.linkedin.com/in/vignesh-manishankar/"</span>;</p>
+        <p><span class="const">const</span> <span class="variable">phone</span> = <span class="string">"+1 (860)
+            705-7780"</span>;</p>
       </div>
-    </section>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/parallax_slider2.jpg" style="height: 600px"></div>
-    <section> 
-      <div class="container row">
-        <br>
-        <br>
-        <h3 class="wow bounceInLeft">&nbsp;&nbsp;&nbsp;And a coder at night...</h3> 
-        <br>
-        <div class="col-md-6">    
-        <p class="wow bounceInLeft">Java</p>   
-        <div id="progressBar" class="wow slideInLeft tiny-green"><div></div></div>   
-        <br>
-        <p class="wow bounceInLeft">JavaScript</p>    
-        <div id="progressBar2" class="wow slideInLeft tiny-green"><div></div></div>  
-        <br>
-        <p class="wow bounceInLeft">Python</p>    
-        <div id="progressBar3" class="wow slideInLeft tiny-green"><div></div></div>  
-        <br>
+    </div>
+
+    <div class="content" id="about-me">
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="sidebar">
+        <div class="folder-group">
+          <div class="folder-header">
+            <span class="arrow">►</span>
+            <span class="folder-icon">📁</span>
+            <span>personal-info</span>
+          </div>
+          <div class="folder-content">
+            <div class="file" data-file="bio">
+              <span class="file-icon">📄</span>
+              <span>bio</span>
+            </div>
+            <div class="file" data-file="experience">
+              <span class="file-icon">📄</span>
+              <span>experience</span>
+            </div>
+            <div class="file" data-file="skills">
+              <span class="file-icon">📄</span>
+              <span>skills</span>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6"> 
-        <p class="wow bounceInLeft">SQL</p>    
-        <div id="progressBar4" class="wow slideInLeft tiny-green"><div></div></div>  
-        <br>
-        <p class="wow bounceInLeft">iOS</p>    
-        <div id="progressBar5" class="wow slideInLeft tiny-green"><div></div></div>  
-        <br>
-        <p class="wow bounceInLeft">MongoDB</p>    
-        <div id="progressBar6" class="wow slideInLeft tiny-green"><div></div></div>  
-        <br>
+        <div class="folder-group">
+          <div class="folder-header">
+            <span class="arrow">►</span>
+            <span class="folder-icon">📁</span>
+            <span>recommendations</span>
+          </div>
+          <div class="folder-content">
+            <div class="file" data-file="nicholas">
+              <span class="file-icon">📄</span>
+              <span>nicholas.md</span>
+            </div>
+            <div class="file" data-file="mardie">
+              <span class="file-icon">📄</span>
+              <span>mardie.md</span>
+            </div>
+            <div class="file" data-file="teldon">
+              <span class="file-icon">📄</span>
+              <span>teldon.md</span>
+            </div>
+            <div class="file" data-file="andy">
+              <span class="file-icon">📄</span>
+              <span>andy.md</span>
+            </div>
+          </div>
+        </div>
+        <div class="folder-group">
+          <div class="folder-header">
+            <span class="arrow">►</span>
+            <span class="folder-icon">📁</span>
+            <span>contacts</span>
+          </div>
+          <div class="folder-content">
+            <div class="file">
+              <span class="file-icon">📄</span>
+              <a href="https://github.com/vignesh17" target="_blank">github</a>
+            </div>
+            <div class="file">
+              <span class="file-icon">📄</span>
+              <a href="https://www.linkedin.com/in/vignesh-manishankar/" target="_blank">linkedin</a>
+            </div>
+            <div class="file">
+              <span class="file-icon">📄</span>
+              <a href="tel:+18607057780">phone</a>
+            </div>
+          </div>
         </div>
       </div>
-      <br>
-      <br>
-    </section>
+      <div class="main-content">
+        <div class="code-editor">
+          <div class="editor-header">
+            <div class="tab active">
+              <span class="tab-content">&lt;/&gt; skills</span>
+              <span class="close">×</span>
+            </div>
+          </div>
+          <div class="editor-content">
+            <div class="line-numbers">
+              <div class="numbers">
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
+              </div>
+            </div>
+            <div class="code-content">
+              <!-- Bio content -->
+              <div class="file-content" id="bio-content">
+                <p class="comment">/**</p>
+                <p class="comment"> * About me</p>
+                <p class="comment"> */</p>
+                <p></p>
+                <p>Backend Software Engineer with 5+ years of experience specializing in Java and Amazon Web Services
+                  (AWS).</p>
+                <p>Skilled in scalable, secure, and efficient backend systems, with a strong focus on cloud-native</p>
+                <p>application development and deployment.</p>
+              </div>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/parallax_slider3.jpg" style="height: 600px"></div>
-    <section>
-      <div class="container" align="left">
-        <br>
-        <br>    
-        <h3 class="wow slideInLeft">My work!</h3>
-        <hr>
-        <br>
-        <a href="https://github.com/vignesh17/Shamir-s-Secret-Sharing-and-Rotation">Image Encryption and Rotation</a>
-        <br>
-        <br>
-        <p class="eighteen"> A Smart Image encryption and rotation algorithm. </p>
-        <p class="seventeen" style="color:#e00"> Java </p>
-        <br>
-        <hr>
-        <br>
-        <a href="https://github.com/vignesh17/Stock-Market">Stock Exchange</a>
-        <br>
-        <br>
-        <p class="eighteen"> A portfolio for purchased stocks. </p>
-        <p class="seventeen" style="color:#e00"> Java </p>
-        <br>
-        <hr>
-        <br>
-        <a href="https://github.com/vignesh17/H2P-Hire-Human-Power">Human Resource Management</a>
-        <br>
-        <br>
-        <p class="eighteen"> A single portal for job application and review.</p>
-        <p class="seventeen" style="color:#e00"> CSS </p>
-        <br>
-        <hr>
-        <br>
-        <a href="https://github.com/vignesh17/Kalvettu_Web">Transliteration of Ancient Stone Inscriptions</a>
-        <br>
-        <br>
-        <p class="eighteen"> A translator for ancient tamil scripts!</p>
-        <p class="seventeen" style="color:#e00"> JavaScript </p>
-        <br>
-        <hr>
-        <br>
-        <a href="https://github.com/vignesh17/Map-My-Problems">Map My Problems</a>
-        <br>
-        <br>
-        <p class="eighteen"> A portal to file and preview complaints for lack/improper amenities.</p>
-        <p class="seventeen" style="color:#e00"> PHP </p>
-        <br>
-        <hr>
-        <br>
-        <br>
-      </div>
-    </section>
-     <div class="parallax-window" data-parallax="scroll" data-image-src="assets/contact_slider.jpeg" style="height: 600px"></div>
-    <section>
-      <div class="container" align="right">
-        <br>
-        <br>
-        <div class="copyright" style="font-size:22px">2019 © Vignesh M&nbsp;&nbsp;<a href="https://www.linkedin.com/in/vignesh-manishankar/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>&nbsp;/&nbsp;<a href="https://github.com/vignesh17" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></div>
-        <br>
-        <br>
-      </div>
-    </section>
+              <!-- LinkedIn Experience content -->
+              <div class="file-content" id="experience-content" style="display: none;">
+                <p class="comment">// Professional Experience</p>
+                <p></p>
+                <p>const <span class="variable">currentRole</span> = {</p>
+                <p class="indent">company: "Corvia",</p>
+                <p class="indent">position: "Backend Software Engineer",</p>
+                <p class="indent">location: "Austin",</p>
+                <p class="indent">education: "University at Albany, SUNY"</p>
+                <p>};</p>
+                <p></p>
+                <p>const <span class="variable">certifications</span> = [</p>
+                <p class="indent">"AWS Certified Developer Associate"</p>
+                <p>];</p>
+              </div>
 
-     <script src="js/wow.js"></script>
-      <script>
-        wow = new WOW(
-          {
-            animateClass: 'animated',
-            offset:       100,
-            callback:     function(box) {
-              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-            }
-          }
-        );
-        wow.init();
-        progress(80, $('#progressBar'));
-        progress(70, $('#progressBar2'));
-        progress(75, $('#progressBar3'));
-        progress(80, $('#progressBar4'));
-        progress(50, $('#progressBar5'));
-        progress(55, $('#progressBar6'));
-      </script>
-  </body>
+              <!-- Nicholas recommendation content -->
+              <div class="file-content" id="nicholas-content" style="display: none;">
+                <p class="comment">// @Nicholas DiGiuseppe</p>
+                <p class="comment">// Payments Engineering Pioneer</p>
+                <p class="comment">// January 15, 2025, Nicholas managed Vignesh directly</p>
+                <p></p>
+                <p>Vignesh is driven and passionate about his work. He is the first person always to volunteer to help a
+                  coworker or put in extra time for an emergency. Couple this fierce dedication with talent and you have
+                  a powerhouse of an engineer. I was fortunate enough to have Vignesh for nearly 6 years and given the
+                  chance would immediately hire him again. Vignesh will change your engineering team for the better in
+                  terms of both culture and productivity.</p>
+              </div>
+
+              <!-- Mardie recommendation content -->
+              <div class="file-content" id="mardie-content" style="display: none;">
+                <p class="comment">// @Mardie Curtis</p>
+                <p class="comment">// Residuals Manager at Corvia Pay</p>
+                <p class="comment">// January 14, 2025, Mardie worked with Vignesh on the same team</p>
+                <p></p>
+                <p>Vignesh is a very kind and conscientious person to work with. We worked on different teams, but he
+                  was always eager to assist me, and always followed through on what was requested from him. He is
+                  hard-working and very good at what he does. Vignesh is a pleasure to work with.</p>
+              </div>
+
+              <!-- Teldon recommendation content -->
+              <div class="file-content" id="teldon-content" style="display: none;">
+                <p class="comment">// @teldon james turner</p>
+                <p class="comment">// principal backend software engineer</p>
+                <p class="comment">// January 14, 2025, teldon james managed Vignesh directly</p>
+                <p></p>
+                <p>vignesh is a real self-starter who can tackle anything. when he worked for me at corvia payments, i
+                  was impressed by the sheer volume of work he produced. unlike some high-producing developers, he is
+                  also quick to adopt and implement team standards, and can help re-enforce a culture of attention to
+                  detail. on our team, we was our resident expert on aws cloud-formation. he also independently took the
+                  lead on improving our continuous-integration processes. anytime we asked for a volunteer, he was first
+                  in line.</p>
+              </div>
+
+              <!-- Andy recommendation content -->
+              <div class="file-content" id="andy-content" style="display: none;">
+                <p class="comment">// @Andy Gallo</p>
+                <p class="comment">// Software architect & blue-collar researcher</p>
+                <p class="comment">// December 19, 2017, Andy was Vignesh's teacher</p>
+                <p></p>
+                <p>As a graduate Teaching Assistant, Vignesh has been prompt and attentive to detail in helping our
+                  senior-level "Algorithms & Data Structures" students stay on track for success. With his prior
+                  education and ability to quickly master the service-oriented Amazon-based class project environment,
+                  Vignesh has become a resource to and advocate for students. He treats the work of all students equally
+                  and fairly, and has literally gone the extra mile to make himself available in campus locations most
+                  frequented by our undergraduates. I could see Vignesh playing a range of deep and varied roles going
+                  forward.</p>
+              </div>
+
+              <!-- Skills content -->
+              <div class="file-content" id="skills-content" style="display: none;">
+                <div class="skills-list">
+                  <p class="comment">// Programming Languages/Frameworks</p>
+                  <div class="skill-item">
+                    <input type="checkbox" id="java" checked disabled>
+                    <label for="java">Java/J2EE</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="webservices" checked disabled>
+                    <label for="webservices">Web Services (REST)</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="junit" checked disabled>
+                    <label for="junit">Junit</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="mockito" checked disabled>
+                    <label for="mockito">Mockito</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="cucumber" checked disabled>
+                    <label for="cucumber">Cucumber</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="spring" checked disabled>
+                    <label for="spring">Spring Framework</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="mssql" checked disabled>
+                    <label for="mssql">Microsoft SQL</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="python" checked disabled>
+                    <label for="python">Python</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="restapi" checked disabled>
+                    <label for="restapi">RESTful API's</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="yaml" checked disabled>
+                    <label for="yaml">YAML</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="json" checked disabled>
+                    <label for="json">JSON</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="xml" checked disabled>
+                    <label for="xml">XML</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="soa" checked disabled>
+                    <label for="soa">Service-Oriented Architecture (SOA)</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="agile" checked disabled>
+                    <label for="agile">Agile development</label>
+                  </div>
+
+                  <p class="comment">// Special Software</p>
+                  <div class="skill-item">
+                    <input type="checkbox" id="aws" checked disabled>
+                    <label for="aws">Amazon Web Services (AWS)</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="jira" checked disabled>
+                    <label for="jira">JIRA</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="gradle" checked disabled>
+                    <label for="gradle">Gradle</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="git" checked disabled>
+                    <label for="git">Git</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="pgadmin" checked disabled>
+                    <label for="pgadmin">PG Admin</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="dbeaver" checked disabled>
+                    <label for="dbeaver">Dbeaver</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="intellij" checked disabled>
+                    <label for="intellij">IntelliJ</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="flyway" checked disabled>
+                    <label for="flyway">Flyway</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="projects">
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="sidebar">
+        <div class="folder-group">
+          <div class="folder-header">
+            <span class="arrow">►</span>
+            <span class="folder-icon">📁</span>
+            <span>projects</span>
+          </div>
+          <div class="folder-content">
+            <div class="file" data-file="crab">
+              <span class="file-icon">📄</span>
+              <span>CRAB</span>
+            </div>
+            <div class="file" data-file="residuals">
+              <span class="file-icon">📄</span>
+              <span>Residuals</span>
+            </div>
+            <div class="file" data-file="fluidpay">
+              <span class="file-icon">📄</span>
+              <span>Fluidpay</span>
+            </div>
+            <div class="file" data-file="filesystem">
+              <span class="file-icon">📄</span>
+              <span>FileSystem</span>
+            </div>
+            <div class="file" data-file="integrations">
+              <span class="file-icon">📄</span>
+              <span>Integrations</span>
+            </div>
+            <div class="file" data-file="alerts">
+              <span class="file-icon">📄</span>
+              <span>Alerts and ToDo</span>
+            </div>
+            <div class="file" data-file="crm">
+              <span class="file-icon">📄</span>
+              <span>CRM</span>
+            </div>
+            <div class="file" data-file="cfTesting">
+              <span class="file-icon">📄</span>
+              <span>CF Testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>CRAB: Credit And Risk Assessment Board</h3>
+                <p class="project-subtitle">Streamlining Merchant Onboarding Through Intelligent Risk Assessment</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive merchant onboarding platform that manages the entire application
+              lifecycle from submission to approval, featuring integrated risk assessment, secure communication, and
+              automated verification.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="crab">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Residuals: Automated Financial Reporting System</h3>
+                <p class="project-subtitle">Streamlining Fee Management and Revenue Analysis</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive financial reporting system that automates the generation and
+              management of fee information, revenue calculations, and error detection with dual storage capabilities.
+            </p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="residuals">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Fluidpay Partner Auto Boarding</h3>
+                <p class="project-subtitle">Automated Partner Account Creation and API Management</p>
+              </div>
+            </div>
+            <p class="project-preview">An automated system that streamlines the process of boarding new partners into
+              the Fluidpay platform, handling account creation, permission setup, and API key management.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="fluidpay">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>File System</h3>
+                <p class="project-subtitle">Resource-Linked File Management with Secure Access Control</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive file management system that enables secure file attachments to
+              various business resources with role-based access control and secure file sharing capabilities.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="filesystem">Read More <i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Third Party Integrations</h3>
+                <p class="project-subtitle">Unified API Integration Platform for Payment and Verification Services</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive integration platform that connects with various third-party
+              payment processors and verification services through REST APIs, standardizing external service
+              integrations.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="integrations">Read More <i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Custom Alert System</h3>
+                <p class="project-subtitle">Automated Pipeline Monitoring and Slack Notifications</p>
+              </div>
+            </div>
+            <p class="project-preview">An automated alert system that monitors pipeline stages and provides real-time
+              Slack notifications for failures and recovery successes, ensuring immediate visibility of pipeline health.
+            </p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="alerts">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>CRM: Customer Relationship Management</h3>
+                <p class="project-subtitle">Comprehensive Partner and Merchant Management with Integrated Boarding
+                  Solutions</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive platform that combines partner/merchant relationship management,
+              self-service capabilities, and specialized boarding tools. Features include portfolio reporting, automated
+              support workflows, and integrated merchant boarding solutions.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="crm">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>CloudFormation Compatibility Testing</h3>
+                <p class="project-subtitle">Preventing Deployment Failures Through Version Jump Testing</p>
+              </div>
+            </div>
+            <div class="project-preview">
+              A specialized pipeline stage that validates CloudFormation deployment compatibility between development
+              and production states, ensuring smooth transitions across version jumps and preventing deployment
+              failures.
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="cfTesting">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <label for="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <span>Dark mode</span>
+      </label>
+    </div>
+    <div class="copyright">
+      © 2025 • Inspired by <a href="https://www.behance.net/gallery/173956831/Portfolio" target="_blank">Davide
+        Simone</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/vignesh-manishankar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/vignesh17" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+
 </html>
