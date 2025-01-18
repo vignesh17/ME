@@ -1,3 +1,7 @@
+// Import SVG diagrams and project content
+import * as SVG from './svg.js';
+import { projectContent } from './project_content.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Theme handling
     const themeToggle = document.getElementById('theme-toggle');
@@ -202,5 +206,148 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             originalClick && originalClick(e);
         };
+    });
+
+    // Project file click handler
+    document.querySelectorAll('.file[data-file]').forEach(file => {
+        file.addEventListener('click', () => {
+            const projectId = file.getAttribute('data-file');
+            if (projectContent[projectId]) {
+                // Update active state
+                document.querySelectorAll('.file').forEach(f => f.classList.remove('active'));
+                file.classList.add('active');
+                
+                // Hide project cards and show project content
+                const projectsGrid = document.querySelector('.projects-grid');
+                if (projectsGrid) {
+                    projectsGrid.style.display = 'none';
+                }
+                
+                // Show project content in editor style
+                const mainContent = document.querySelector('#projects .main-content');
+                const project = projectContent[projectId];
+                
+                // Get existing editor or create new one
+                let codeEditor = mainContent.querySelector('.code-editor');
+                if (!codeEditor) {
+                    codeEditor = document.createElement('div');
+                    codeEditor.className = 'code-editor';
+                    mainContent.appendChild(codeEditor);
+                }
+
+                // Get or create editor header
+                let editorHeader = codeEditor.querySelector('.editor-header');
+                if (!editorHeader) {
+                    editorHeader = document.createElement('div');
+                    editorHeader.className = 'editor-header';
+                    codeEditor.appendChild(editorHeader);
+                }
+
+                // Check if tab already exists
+                let existingTab = editorHeader.querySelector(`.tab[data-project="${projectId}"]`);
+                if (!existingTab) {
+                    // Create new tab
+                    const tab = document.createElement('div');
+                    tab.className = 'tab';
+                    tab.setAttribute('data-project', projectId);
+                    tab.innerHTML = `
+                        <span class="tab-content">&lt;/&gt; ${projectId.toUpperCase()}</span>
+                        <span class="close">×</span>
+                    `;
+                    editorHeader.appendChild(tab);
+
+                    // Add close handler
+                    tab.querySelector('.close').addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const editorHeader = tab.parentElement;
+                        const remainingTabs = editorHeader.querySelectorAll('.tab').length;
+                        
+                        // Remove this tab
+                        tab.remove();
+                        
+                        // If this was the last tab
+                        if (remainingTabs === 1) {
+                            const mainContent = document.querySelector('#projects .main-content');
+                            const projectsGrid = document.querySelector('.projects-grid');
+                            if (projectsGrid) {
+                                mainContent.innerHTML = projectsGrid.outerHTML;
+                                const newProjectsGrid = mainContent.querySelector('.projects-grid');
+                                newProjectsGrid.style.display = 'grid';
+
+                                // Reattach click handlers to project cards
+                                newProjectsGrid.querySelectorAll('.project-card').forEach(card => {
+                                    card.addEventListener('click', () => {
+                                        const projectLink = card.querySelector('.project-link');
+                                        if (projectLink) {
+                                            const projectId = projectLink.getAttribute('data-project');
+                                            const projectFile = document.querySelector(`.file[data-file="${projectId}"]`);
+                                            if (projectFile) {
+                                                projectFile.click();
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                            // Remove active state from file
+                            const activeFile = document.querySelector('.file.active');
+                            if (activeFile) {
+                                activeFile.classList.remove('active');
+                            }
+                        } else if (tab.classList.contains('active') && remainingTabs > 1) {
+                            // If this was the active tab but not the last one, activate another tab
+                            const lastTab = editorHeader.querySelector('.tab:last-child');
+                            if (lastTab) {
+                                lastTab.click();
+                            }
+                        }
+                    });
+
+                    // Add click handler for tab
+                    tab.addEventListener('click', () => {
+                        // Update active tab
+                        editorHeader.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+
+                        // Update content
+                        const editorContent = codeEditor.querySelector('.editor-content') || document.createElement('div');
+                        editorContent.className = 'editor-content';
+                        editorContent.innerHTML = `
+                            <div class="line-numbers">
+                                <div class="numbers"></div>
+                            </div>
+                            <div class="code-content">
+                                ${project.content}
+                            </div>
+                        `;
+                        if (!codeEditor.contains(editorContent)) {
+                            codeEditor.appendChild(editorContent);
+                        }
+
+                        // Initialize line numbers
+                        const content = editorContent.querySelector('.code-content');
+                        const lineCount = content.innerHTML.split('\n').length;
+                        updateLineNumbers(lineCount);
+                    });
+                }
+
+                // Activate the tab
+                const tab = existingTab || editorHeader.querySelector(`.tab[data-project="${projectId}"]`);
+                tab.click();
+            }
+        });
+    });
+
+    // Project card click handler
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const projectLink = card.querySelector('.project-link');
+            if (projectLink) {
+                const projectId = projectLink.getAttribute('data-project');
+                const projectFile = document.querySelector(`.file[data-file="${projectId}"]`);
+                if (projectFile) {
+                    projectFile.click();
+                }
+            }
+        });
     });
 }); 

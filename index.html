@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vignesh Manishankar</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
@@ -23,6 +24,7 @@
     <div class="content" id="hello">
       <h1>Hi all, I am</h1>
       <h2>Vignesh Manishankar</h2>
+      <img src="assets/dp.png" alt="Vignesh Manishankar" class="profile-pic">
       <p class="role">> Backend Software Engineer</p>
 
       <div class="code-block">
@@ -208,41 +210,96 @@
               <!-- Skills content -->
               <div class="file-content" id="skills-content" style="display: none;">
                 <div class="skills-list">
+                  <p class="comment">// Programming Languages/Frameworks</p>
                   <div class="skill-item">
-                    <input type="checkbox" id="java" checked>
-                    <label for="java">Java</label>
+                    <input type="checkbox" id="java" checked disabled>
+                    <label for="java">Java/J2EE</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="aws" checked>
-                    <label for="aws">AWS</label>
+                    <input type="checkbox" id="webservices" checked disabled>
+                    <label for="webservices">Web Services (REST)</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="cloudformation" checked>
-                    <label for="cloudformation">CloudFormation</label>
+                    <input type="checkbox" id="junit" checked disabled>
+                    <label for="junit">Junit</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="cicd" checked>
-                    <label for="cicd">CI/CD</label>
+                    <input type="checkbox" id="mockito" checked disabled>
+                    <label for="mockito">Mockito</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="mongodb" checked>
-                    <label for="mongodb">MongoDB</label>
+                    <input type="checkbox" id="cucumber" checked disabled>
+                    <label for="cucumber">Cucumber</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="mysql" checked>
-                    <label for="mysql">MySQL</label>
+                    <input type="checkbox" id="spring" checked disabled>
+                    <label for="spring">Spring Framework</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="docker" checked>
-                    <label for="docker">Docker</label>
+                    <input type="checkbox" id="mssql" checked disabled>
+                    <label for="mssql">Microsoft SQL</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="jenkins" checked>
-                    <label for="jenkins">Jenkins</label>
+                    <input type="checkbox" id="python" checked disabled>
+                    <label for="python">Python</label>
                   </div>
                   <div class="skill-item">
-                    <input type="checkbox" id="git" checked>
+                    <input type="checkbox" id="restapi" checked disabled>
+                    <label for="restapi">RESTful API's</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="yaml" checked disabled>
+                    <label for="yaml">YAML</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="json" checked disabled>
+                    <label for="json">JSON</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="xml" checked disabled>
+                    <label for="xml">XML</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="soa" checked disabled>
+                    <label for="soa">Service-Oriented Architecture (SOA)</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="agile" checked disabled>
+                    <label for="agile">Agile development</label>
+                  </div>
+
+                  <p class="comment">// Special Software</p>
+                  <div class="skill-item">
+                    <input type="checkbox" id="aws" checked disabled>
+                    <label for="aws">Amazon Web Services (AWS)</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="jira" checked disabled>
+                    <label for="jira">JIRA</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="gradle" checked disabled>
+                    <label for="gradle">Gradle</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="git" checked disabled>
                     <label for="git">Git</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="pgadmin" checked disabled>
+                    <label for="pgadmin">PG Admin</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="dbeaver" checked disabled>
+                    <label for="dbeaver">Dbeaver</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="intellij" checked disabled>
+                    <label for="intellij">IntelliJ</label>
+                  </div>
+                  <div class="skill-item">
+                    <input type="checkbox" id="flyway" checked disabled>
+                    <label for="flyway">Flyway</label>
                   </div>
                 </div>
               </div>
@@ -253,70 +310,176 @@
     </div>
 
     <div class="content" id="projects">
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-icon">
-            <svg viewBox="0 0 100 100" class="icon">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60">I</text>
-            </svg>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="sidebar">
+        <div class="folder-group">
+          <div class="folder-header">
+            <span class="arrow">►</span>
+            <span class="folder-icon">📁</span>
+            <span>projects</span>
           </div>
-          <h3>Image Encryption and Rotation</h3>
-          <p>A Smart Image encryption and rotation algorithm.</p>
-          <div class="project-tech">Java</div>
-          <a href="https://github.com/vignesh17/Shamir-s-Secret-Sharing-and-Rotation" class="project-link"
-            target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+          <div class="folder-content">
+            <div class="file" data-file="crab">
+              <span class="file-icon">📄</span>
+              <span>CRAB</span>
+            </div>
+            <div class="file" data-file="residuals">
+              <span class="file-icon">📄</span>
+              <span>Residuals</span>
+            </div>
+            <div class="file" data-file="fluidpay">
+              <span class="file-icon">📄</span>
+              <span>Fluidpay</span>
+            </div>
+            <div class="file" data-file="filesystem">
+              <span class="file-icon">📄</span>
+              <span>FileSystem</span>
+            </div>
+            <div class="file" data-file="integrations">
+              <span class="file-icon">📄</span>
+              <span>Integrations</span>
+            </div>
+            <div class="file" data-file="alerts">
+              <span class="file-icon">📄</span>
+              <span>Alerts and ToDo</span>
+            </div>
+            <div class="file" data-file="crm">
+              <span class="file-icon">📄</span>
+              <span>CRM</span>
+            </div>
+            <div class="file" data-file="cfTesting">
+              <span class="file-icon">📄</span>
+              <span>CF Testing</span>
+            </div>
+          </div>
         </div>
-
-        <div class="project-card">
-          <div class="project-icon">
-            <svg viewBox="0 0 100 100" class="icon">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60">S</text>
-            </svg>
+      </div>
+      <div class="main-content">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>CRAB: Credit And Risk Assessment Board</h3>
+                <p class="project-subtitle">Streamlining Merchant Onboarding Through Intelligent Risk Assessment</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive merchant onboarding platform that manages the entire application
+              lifecycle from submission to approval, featuring integrated risk assessment, secure communication, and
+              automated verification.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="crab">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
-          <h3>Stock Exchange</h3>
-          <p>A portfolio for purchased stocks.</p>
-          <div class="project-tech">Java</div>
-          <a href="https://github.com/vignesh17/Stock-Market" class="project-link" target="_blank">View Project <i
-              class="fas fa-external-link-alt"></i></a>
-        </div>
 
-        <div class="project-card">
-          <div class="project-icon">
-            <svg viewBox="0 0 100 100" class="icon">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60">H</text>
-            </svg>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Residuals: Automated Financial Reporting System</h3>
+                <p class="project-subtitle">Streamlining Fee Management and Revenue Analysis</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive financial reporting system that automates the generation and
+              management of fee information, revenue calculations, and error detection with dual storage capabilities.
+            </p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="residuals">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
-          <h3>Human Resource Management</h3>
-          <p>A single portal for job application and review.</p>
-          <div class="project-tech">CSS</div>
-          <a href="https://github.com/vignesh17/H2P-Hire-Human-Power" class="project-link" target="_blank">View Project
-            <i class="fas fa-external-link-alt"></i></a>
-        </div>
 
-        <div class="project-card">
-          <div class="project-icon">
-            <svg viewBox="0 0 100 100" class="icon">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60">T</text>
-            </svg>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Fluidpay Partner Auto Boarding</h3>
+                <p class="project-subtitle">Automated Partner Account Creation and API Management</p>
+              </div>
+            </div>
+            <p class="project-preview">An automated system that streamlines the process of boarding new partners into
+              the Fluidpay platform, handling account creation, permission setup, and API key management.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="fluidpay">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
-          <h3>Transliteration of Ancient Stone Inscriptions</h3>
-          <p>A translator for ancient tamil scripts!</p>
-          <div class="project-tech">JavaScript</div>
-          <a href="https://github.com/vignesh17/Kalvettu_Web" class="project-link" target="_blank">View Project <i
-              class="fas fa-external-link-alt"></i></a>
-        </div>
 
-        <div class="project-card">
-          <div class="project-icon">
-            <svg viewBox="0 0 100 100" class="icon">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60">M</text>
-            </svg>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>File System</h3>
+                <p class="project-subtitle">Resource-Linked File Management with Secure Access Control</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive file management system that enables secure file attachments to
+              various business resources with role-based access control and secure file sharing capabilities.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="filesystem">Read More <i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
-          <h3>Map My Problems</h3>
-          <p>A portal to file and preview complaints for lack/improper amenities.</p>
-          <div class="project-tech">PHP</div>
-          <a href="https://github.com/vignesh17/Map-My-Problems" class="project-link" target="_blank">View Project <i
-              class="fas fa-external-link-alt"></i></a>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Third Party Integrations</h3>
+                <p class="project-subtitle">Unified API Integration Platform for Payment and Verification Services</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive integration platform that connects with various third-party
+              payment processors and verification services through REST APIs, standardizing external service
+              integrations.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="integrations">Read More <i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>Custom Alert System</h3>
+                <p class="project-subtitle">Automated Pipeline Monitoring and Slack Notifications</p>
+              </div>
+            </div>
+            <p class="project-preview">An automated alert system that monitors pipeline stages and provides real-time
+              Slack notifications for failures and recovery successes, ensuring immediate visibility of pipeline health.
+            </p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="alerts">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>CRM: Customer Relationship Management</h3>
+                <p class="project-subtitle">Comprehensive Partner and Merchant Management with Integrated Boarding
+                  Solutions</p>
+              </div>
+            </div>
+            <p class="project-preview">A comprehensive platform that combines partner/merchant relationship management,
+              self-service capabilities, and specialized boarding tools. Features include portfolio reporting, automated
+              support workflows, and integrated merchant boarding solutions.</p>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="crm">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3>CloudFormation Compatibility Testing</h3>
+                <p class="project-subtitle">Preventing Deployment Failures Through Version Jump Testing</p>
+              </div>
+            </div>
+            <div class="project-preview">
+              A specialized pipeline stage that validates CloudFormation deployment compatibility between development
+              and production states, ensuring smooth transitions across version jumps and preventing deployment
+              failures.
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-project="cfTesting">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -340,7 +503,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
